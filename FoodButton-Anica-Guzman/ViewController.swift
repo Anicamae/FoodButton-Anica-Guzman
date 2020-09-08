@@ -22,12 +22,12 @@ class ViewController: UIViewController {
 
     @IBAction func OrderPizzaPressed(_ sender: UIButton) {
         messageLabel.text = "🍕 Price : $19.99"
-        imageView.image = UIImage(named: "image10")
+        imageView.image = UIImage(named: "pizza")
     }
     
     @IBAction func OrderBurgerPressed(_ sender: Any) {
         messageLabel.text = "🍔 Price : $15.99"
-        imageView.image = UIImage(named: "image11")
+        imageView.image = UIImage(named: "hamburger")
     }
     
 }
