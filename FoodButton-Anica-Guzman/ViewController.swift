@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-var imageNumber = 0
+
+    var priceLabel = "pizza"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,32 +22,66 @@ var imageNumber = 0
         
     }
     
-    @IBAction func messageButtonPressed(_ sender: UIButton) {
+    @IBAction func nextDish(_ sender: UIButton) {
         
-        print(imageNumber)
-        // let imageName = "plant1" + String(imageNumber)
-        let imageName = "plant\(imageNumber)"
-        imageView.image = UIImage(named: imageName)
-        imageNumber = imageNumber + 1
-        if imageNumber == 10 {
-            imageNumber = 0
+        
+        
+        if priceLabel.contains("pizza"){
+            print("The Next Dish is burger")
+            
+                 messageLabel.text = " Price : $21.99 "
+                 imageView.image = UIImage(named: "pizza")
+            
+            priceLabel = "burger"
+            
+        } else if priceLabel.contains("burger"){
+            print("The Next Dish is salad")
+            
+            messageLabel.text = " Price : $10.00 "
+            imageView.image = UIImage(named: "burger")
+            
+            priceLabel = "salad"
+            
+        } else if priceLabel.contains("salad"){
+            print("The Next Dish is chicken")
+            
+            messageLabel.text = " Price : $9.98 "
+                   imageView.image = UIImage(named: "salad")
+            
+            priceLabel = "chicken"
+            
+        } else if priceLabel.contains("chicken"){
+            print("The Next Dish is steak")
+            
+            messageLabel.text = " Price : $13.99 "
+                imageView.image = UIImage(named: "chicken")
+            
+            priceLabel = "steak"
+            
+        } else if priceLabel.contains("steak"){
+            print("The Next Dish is noodle")
+            
+            messageLabel.text = " Price : $23.99 "
+                  imageView.image = UIImage(named: "steak")
+            
+            priceLabel = "pasta"
+            
+        } else if  priceLabel.contains("pasta"){
+            print("The Next Dish is pizza")
+            
+            messageLabel.text = " Price : $16.99 "
+            imageView.image = UIImage(named: "pasta")
+            
         }
+    
+        else if  priceLabel.contains("pizza"){
+        print("The Next Dish is burger")
         
-        //        let awesomeMessage = "You Are Awesome!"
-        //        let greatMessage = "You Are Great!"
-        //        let bombMessage = "You Are Da Bomb!"
-        //
-        //        if messageLabel.text == awesomeMessage  {
-        //            messageLabel.text = greatMessage
-        //            imageView.image = UIImage(named: "plant1")
-        //        } else if messageLabel.text == greatMessage {
-        //            messageLabel.text = bombMessage
-        //            imageView.image = UIImage(named: "plant2")
-        //        } else  {
-        //            messageLabel.text = awesomeMessage
-        //            imageView.image = UIImage(named: "plant3")
-        //
-        //        }
+             messageLabel.text = " Price : $21.99 "
+             imageView.image = UIImage(named: "pizza")
+        
+        
+        
     }
     
     
